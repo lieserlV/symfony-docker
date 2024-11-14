@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer un article{% endblock %}
+
+{% block body %}
+
+<div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Article</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Article</li>
+                        </ol>
+                        <div class="card" style="width: 18rem;">
+                                        <div class="card-body">
+                                        <h5 class="card-title">Créer un article</h5>
+                                        {% for message in app.flashes('success') %}
+                                            <div class="alert alert-success">
+                                                {{ message }}
+                                            </div>
+                                        {% endfor %}
+                                        {{ form(form) }}
+                                      </div>
+                                    </div>
+            </main>    
+            </div>
+        </div>
+{% endblock %}
